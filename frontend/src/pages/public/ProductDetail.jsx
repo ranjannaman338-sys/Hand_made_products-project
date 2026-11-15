@@ -125,9 +125,9 @@ export function ProductDetail() {
       {/* Main Product Showcase Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left: Gallery */}
-        <div className="lg:col-span-7 space-y-4">
+        <div className="lg:col-span-5 space-y-4">
           {/* Main Selected Image */}
-          <div className="relative aspect-square rounded-3xl overflow-hidden bg-cream-100 border border-cream-200 shadow-sm">
+          <div className="relative aspect-square max-h-96 rounded-2xl overflow-hidden bg-cream-100 border border-cream-200 shadow-sm">
             <img
               src={product.images?.[selectedImage] || product.images?.[0]}
               alt={product.name}
@@ -164,7 +164,7 @@ export function ProductDetail() {
         </div>
 
         {/* Right: Product Actions & Specs */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="lg:col-span-7 space-y-6">
           {/* Artisan & Location Badge */}
           {product.sellerProfileId && (
             <Link
