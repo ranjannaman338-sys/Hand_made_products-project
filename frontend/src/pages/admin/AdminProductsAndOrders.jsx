@@ -48,6 +48,8 @@ export function AdminProducts() {
     <div className="flex flex-col md:flex-row min-h-[calc(100vh-5rem)]">
       <DashboardSidebar role="admin" mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
 
+      <DashboardMobileHeader title="Marketplace Orders" onMenuOpen={() => setMobileOpen(true)} />
+
       <DashboardMobileHeader title="Product Moderation" onMenuOpen={() => setMobileOpen(true)} />
       <main className="flex-1 p-4 sm:p-6 lg:p-10 bg-cream-50/50 space-y-8">
         <div>
@@ -163,6 +165,7 @@ export function AdminProducts() {
 }
 
 export function AdminOrders() {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [statusFilter, setStatusFilter] = useState('');
@@ -202,6 +205,8 @@ export function AdminOrders() {
   return (
     <div className="flex flex-col md:flex-row min-h-[calc(100vh-5rem)]">
       <DashboardSidebar role="admin" mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
+
+      <DashboardMobileHeader title="Marketplace Orders" onMenuOpen={() => setMobileOpen(true)} />
 
       <main className="flex-1 p-4 sm:p-6 lg:p-10 bg-cream-50/50 space-y-8">
         <div>
